@@ -1,7 +1,7 @@
 const keccak256 = require('keccak256');
 const fs = require('fs');
 const { MerkleTree } = require('merkletreejs')
-const leaves = require('./leaves.json');
+const geneList = require('./NFgenesList.json');
 
 const leavesHashArray = [];
 
@@ -11,9 +11,9 @@ const leavesHashArray = [];
  * 
  *  Store this new json array in the 'leavesHashArray' variable
  */
-for (i = 0; i < leaves.length; i++) {
+for (i = 0; i < geneList.length; i++) {
     let currentValue;
-    currentValue = '0x' + keccak256(JSON.stringify(leaves[i])).toString('hex');
+    currentValue = '0x' + keccak256(JSON.stringify(geneList[i])).toString('hex');
     console.log(currentValue);
     console.log(`Generating keccak256 hash for ${currentValue.Symbol}`);
     leavesHashArray.push(currentValue);
@@ -27,16 +27,16 @@ console.log(`Hash array is length ${leavesHashArray.length}`);
  */
 
 // Creates a new json file with the array of hashed gene objects
-fs.writeFile('hashArray.json', JSON.stringify(leavesHashArray), err => {
+fs.writeFile('MerkleLeaves.json', JSON.stringify(leavesHashArray), err => {
     if (err) {
         throw err;
     }
-    console.log('Hashed array saved to hashArray.json');
+    console.log('Hashed array saved to MerkleLeaves.json');
 });
 
 /**
  *  Creates a new file called 'MerkleTree' that contains
- *  the generated Merkle tree from the 'hashArray.json' file
+ *  the generated Merkle tree from the 'MerkleLeaves.json' file
  */
 const tree = new MerkleTree(leavesHashArray, keccak256);
 console.log(tree);
