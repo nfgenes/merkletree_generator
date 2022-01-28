@@ -6,8 +6,10 @@ const leaves = require('./leaves.json');
 const leavesHashArray = [];
 
 /**
- *  Iterate through the json array and keccak256 hash each gene
- *  object into a hexadecimal string.
+ *  Iterate through the json array source data and keccak256
+ *  hash each gene object into a hexadecimal string.
+ * 
+ *  Store this new json array in the 'leavesHashArray' variable
  */
 for (i = 0; i < leaves.length; i++) {
     let currentValue;
@@ -24,7 +26,7 @@ console.log(`Hash array is length ${leavesHashArray.length}`);
  *  give a notice of unbalaned tree and perhaps add functionality to auto-balance.
  */
 
-// generate a new json file with the array of hashed objects
+// Creates a new json file with the array of hashed gene objects
 fs.writeFile('hashArray.json', JSON.stringify(leavesHashArray), err => {
     if (err) {
         throw err;
@@ -33,10 +35,9 @@ fs.writeFile('hashArray.json', JSON.stringify(leavesHashArray), err => {
 });
 
 /**
- *  Created a new file called 'MerkleTree' that contains
- *  the generated Merkle tree from the 'hashedArray.json' file
+ *  Creates a new file called 'MerkleTree' that contains
+ *  the generated Merkle tree from the 'hashArray.json' file
  */
-
 const tree = new MerkleTree(leavesHashArray, keccak256);
 console.log(tree);
 
@@ -46,3 +47,14 @@ fs.writeFile('MerkleTree.txt', tree.toString(), err => {
     }
     console.log(`Merkle tree generated. Root hash is ${tree.getHexRoot()}`);
 })
+
+/**
+ *  Create text file called 'MerkleTreeRoot' that contains
+ *  the Merkle tree root hash.
+ */
+fs.writeFile('MerkleTreeRoot.txt', tree.getHexRoot(), err => {
+    if (err) {
+        throw err;
+    }
+    console.log(`Merkle Tree root hash ${tree.getHexRoot()} saved to MerkleTreeRoot.txt`);
+});
