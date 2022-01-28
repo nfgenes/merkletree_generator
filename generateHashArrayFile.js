@@ -12,10 +12,12 @@ const leavesHashArray = [];
  *  Store this new json array in the 'leavesHashArray' variable
  */
 for (i = 0; i < geneList.length; i++) {
+    let currentLeaf;
     let currentValue;
+    currentLeaf = geneList[i];
     currentValue = '0x' + keccak256(JSON.stringify(geneList[i])).toString('hex');
     console.log(currentValue);
-    console.log(`Generating keccak256 hash for ${currentValue.Symbol}`);
+    console.log(`Generating keccak256 hash for ${currentLeaf.Symbol}`);
     leavesHashArray.push(currentValue);
 }
 
@@ -39,7 +41,7 @@ fs.writeFile('MerkleLeaves.json', JSON.stringify(leavesHashArray), err => {
  *  the generated Merkle tree from the 'MerkleLeaves.json' file
  */
 const tree = new MerkleTree(leavesHashArray, keccak256);
-console.log(tree);
+console.log('Tree:\n', tree.toString());
 
 fs.writeFile('MerkleTree.txt', tree.toString(), err => {
     if (err) {
@@ -58,3 +60,8 @@ fs.writeFile('MerkleTreeRoot.txt', tree.getHexRoot(), err => {
     }
     console.log(`Merkle Tree root hash ${tree.getHexRoot()} saved to MerkleTreeRoot.txt`);
 });
+
+// Log some information
+console.log(`Layer Count: ${tree.getLayerCount()}`);
+console.log(`Leaf Count: ${tree.getLeafCount()}`);
+console.log(`Depth ${tree.getDepth()}`);
