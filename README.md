@@ -1,14 +1,14 @@
 # Merkle Tree Generator
 
-This utility generates a Merkle tree from a provided list of objects in a json file called 'leaves.json'.
+This utility generates a Merkle tree from a provided list of objects in a json file called 'leaves.json'. The Merkle tree will be automatically generated and stored in 'MerkleTree.txt'.
 
-Once the 'leaves.json' file is populated with the data, run:
+The 'leaves.json' file must be a JSON array of values. Once the 'leaves.json' file is populated with the data, run:
 
 ```
-$node generateHash.js
+$node generateHashArrayFile.js
 ```
 
-To generate a Merkle tree via command line, use:
+To generate a Merkle tree and view via command line (this will not generate a file), use:
 
 ```
 cat hashArray.json | merkletreejs --leaves=- --hash=keccak256 --output=tree
