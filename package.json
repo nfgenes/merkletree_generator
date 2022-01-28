@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.2.27",
+    "merkletreejs-cli": "^0.0.2"
+  },
+  "name": "merkletree_generator",
+  "version": "1.0.0",
+  "description": "Generates a Merkle tree from a json file of gene objects",
+  "main": "index.js",
+  "author": "josevelez.eth",
+  "license": "MIT"
+}

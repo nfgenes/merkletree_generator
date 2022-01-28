@@ -1,0 +1,434 @@
+[
+ {
+   "Symbol": "HAX1",
+   "Name": "HCLS1 associated protein X-1",
+   "Length": 3246,
+   "Localisation": "Chromosome 1: 154272629 - 154275875"
+ },
+ {
+   "Symbol": "ERBB2",
+   "Name": "erb-b2 receptor tyrosine kinase 2",
+   "Length": 40566,
+   "Localisation": "Chromosome 17: 39688094 - 39728660"
+ },
+ {
+   "Symbol": "AR",
+   "Name": "androgen receptor",
+   "Length": 186598,
+   "Localisation": "Chromosome X: 67544021 - 67730619"
+ },
+ {
+   "Symbol": "ABCB1",
+   "Name": "ATP binding cassette subfamily B member 1",
+   "Length": 210278,
+   "Localisation": "Chromosome 7: 87503017 - 87713295"
+ },
+ {
+   "Symbol": "SNCA",
+   "Name": "synuclein alpha",
+   "Length": 114225,
+   "Localisation": "Chromosome 4: 89724099 - 89838324"
+ },
+ {
+   "Symbol": "CFTR",
+   "Name": "CF transmembrane conductance regulator",
+   "Length": 188640,
+   "Localisation": "Chromosome 7: 117480025 - 117668665"
+ },
+ {
+   "Symbol": "MAPT",
+   "Name": "microtubule associated protein tau",
+   "Length": 133796,
+   "Localisation": "Chromosome 17: 45894538 - 46028334"
+ },
+ {
+   "Symbol": "CASP3",
+   "Name": "caspase 3",
+   "Length": 21751,
+   "Localisation": "Chromosome 4: 184627696 - 184649447"
+ },
+ {
+   "Symbol": "ESR2",
+   "Name": "estrogen receptor 2",
+   "Length": 111924,
+   "Localisation": "Chromosome 14: 64226707 - 64338631"
+ },
+ {
+   "Symbol": "GSK3B",
+   "Name": "glycogen synthase kinase 3 beta",
+   "Length": 274502,
+   "Localisation": "Chromosome 3: 119821321 - 120095823"
+ },
+ {
+   "Symbol": "IL1A",
+   "Name": "interleukin 1 alpha",
+   "Length": 10568,
+   "Localisation": "Chromosome 2: 112773925 - 112784493"
+ },
+ {
+   "Symbol": "PRNP",
+   "Name": "prion protein",
+   "Length": 15132,
+   "Localisation": "Chromosome 20: 4686456 - 4701588"
+ },
+ {
+   "Symbol": "RHOA",
+   "Name": "ras homolog family member A",
+   "Length": 52831,
+   "Localisation": "Chromosome 3: 49359145 - 49411976"
+ },
+ {
+   "Symbol": "MKI67",
+   "Name": "marker of proliferation Ki-67",
+   "Length": 29764,
+   "Localisation": "Chromosome 10: 128096659 - 128126423"
+ },
+ {
+   "Symbol": "HSP90AA1",
+   "Name": "heat shock protein 90 alpha family class A member 1",
+   "Length": 59007,
+   "Localisation": "Chromosome 14: 102080742 - 102139749"
+ },
+ {
+   "Symbol": "HSPA5",
+   "Name": "heat shock protein family A (Hsp70) member 5",
+   "Length": 6490,
+   "Localisation": "Chromosome 9: 125234853 - 125241343"
+ },
+ {
+   "Symbol": "PLAUR",
+   "Name": "plasminogen activator, urokinase receptor",
+   "Length": 24102,
+   "Localisation": "Chromosome 19: 43646095 - 43670197"
+ },
+ {
+   "Symbol": "UBC",
+   "Name": "ubiquitin C",
+   "Length": 3004,
+   "Localisation": "Chromosome 12: 124911646 - 124914650"
+ },
+ {
+   "Symbol": "PTPN22",
+   "Name": "protein tyrosine phosphatase non-receptor type 22",
+   "Length": 57950,
+   "Localisation": "Chromosome 1: 113813811 - 113871761"
+ },
+ {
+   "Symbol": "GNAS",
+   "Name": "GNAS complex locus",
+   "Length": 71511,
+   "Localisation": "Chromosome 20: 58839681 - 58911192"
+ },
+ {
+   "Symbol": "HSPB1",
+   "Name": "heat shock protein family B (small) member 1",
+   "Length": 1619,
+   "Localisation": "Chromosome 7: 76302673 - 76304292"
+ },
+ {
+   "Symbol": "CLU",
+   "Name": "clusterin",
+   "Length": 17783,
+   "Localisation": "Chromosome 8: 27596917 - 27614700"
+ },
+ {
+   "Symbol": "PIK3R1",
+   "Name": "phosphoinositide-3-kinase regulatory subunit 1",
+   "Length": 86084,
+   "Localisation": "Chromosome 5: 68215737 - 68301821"
+ },
+ {
+   "Symbol": "BECN1",
+   "Name": "beclin 1",
+   "Length": 14150,
+   "Localisation": "Chromosome 17: 42810132 - 42824282"
+ },
+ {
+   "Symbol": "XIAP",
+   "Name": "X-linked inhibitor of apoptosis",
+   "Length": 54264,
+   "Localisation": "Chromosome X: 123859708 - 123913972"
+ },
+ {
+   "Symbol": "RAF1",
+   "Name": "Raf-1 proto-oncogene, serine/threonine kinase",
+   "Length": 80516,
+   "Localisation": "Chromosome 3: 12583601 - 12664117"
+ },
+ {
+   "Symbol": "DDX58",
+   "Name": "DExD/H-box helicase 58",
+   "Length": 70894,
+   "Localisation": "Chromosome 9: 32455302 - 32526196"
+ },
+ {
+   "Symbol": "CHEK1",
+   "Name": "checkpoint kinase 1",
+   "Length": 51345,
+   "Localisation": "Chromosome 11: 125624910 - 125676255"
+ },
+ {
+   "Symbol": "VCP",
+   "Name": "valosin containing protein",
+   "Length": 16561,
+   "Localisation": "Chromosome 9: 35056064 - 35072625"
+ },
+ {
+   "Symbol": "XRCC3",
+   "Name": "X-ray repair cross complementing 3",
+   "Length": 17875,
+   "Localisation": "Chromosome 14: 103697611 - 103715486"
+ },
+ {
+   "Symbol": "NCAM1",
+   "Name": "neural cell adhesion molecule 1",
+   "Length": 317016,
+   "Localisation": "Chromosome 11: 112961420 - 113278436"
+ },
+ {
+   "Symbol": "HSPD1",
+   "Name": "heat shock protein family D (Hsp60) member 1",
+   "Length": 13690,
+   "Localisation": "Chromosome 2: 197486584 - 197500274"
+ },
+ {
+   "Symbol": "AURKB",
+   "Name": "aurora kinase B",
+   "Length": 6036,
+   "Localisation": "Chromosome 17: 8204731 - 8210767"
+ },
+ {
+   "Symbol": "TSC2",
+   "Name": "TSC complex subunit 2",
+   "Length": 41687,
+   "Localisation": "Chromosome 16: 2047804 - 2089491"
+ },
+ {
+   "Symbol": "HAX1P1",
+   "Name": "HAX1 pseudogene 1",
+   "Length": 1141,
+   "Localisation": "Chromosome X: 148197832 - 148198973"
+ },
+ {
+   "Symbol": "SHC1",
+   "Name": "SHC adaptor protein 1",
+   "Length": 12194,
+   "Localisation": "Chromosome 1: 154962298 - 154974492"
+ },
+ {
+   "Symbol": "XPO1",
+   "Name": "exportin 1",
+   "Length": 60673,
+   "Localisation": "Chromosome 2: 61477849 - 61538522"
+ },
+ {
+   "Symbol": "ELANE",
+   "Name": "elastase, neutrophil expressed",
+   "Length": 5253,
+   "Localisation": "Chromosome 19: 850997 - 856250"
+ },
+ {
+   "Symbol": "NTRK1",
+   "Name": "neurotrophic receptor tyrosine kinase 1",
+   "Length": 66100,
+   "Localisation": "Chromosome 1: 156815750 - 156881850"
+ },
+ {
+   "Symbol": "L1CAM",
+   "Name": "L1 cell adhesion molecule",
+   "Length": 24659,
+   "Localisation": "Chromosome X: 153861514 - 153886173"
+ },
+ {
+   "Symbol": "MTR",
+   "Name": "5-methyltetrahydrofolate-homocysteine methyltransferase",
+   "Length": 109677,
+   "Localisation": "Chromosome 1: 236794304 - 236903981"
+ },
+ {
+   "Symbol": "STUB1",
+   "Name": "STIP1 homology and U-box containing protein 1",
+   "Length": 2391,
+   "Localisation": "Chromosome 16: 680410 - 682801"
+ },
+ {
+   "Symbol": "OPA1",
+   "Name": "OPA1 mitochondrial dynamin like GTPase",
+   "Length": 104662,
+   "Localisation": "Chromosome 3: 193593149 - 193697811"
+ },
+ {
+   "Symbol": "DNM1L",
+   "Name": "dynamin 1 like",
+   "Length": 66354,
+   "Localisation": "Chromosome 12: 32679296 - 32745650"
+ },
+ {
+   "Symbol": "ILK",
+   "Name": "integrin linked kinase",
+   "Length": 7125,
+   "Localisation": "Chromosome 11: 6603748 - 6610873"
+ },
+ {
+   "Symbol": "EWSR1",
+   "Name": "EWS RNA binding protein 1",
+   "Length": 32269,
+   "Localisation": "Chromosome 22: 29268254 - 29300523"
+ },
+ {
+   "Symbol": "AIFM1",
+   "Name": "apoptosis inducing factor mitochondria associated 1",
+   "Length": 36479,
+   "Localisation": "Chromosome X: 130129362 - 130165841"
+ },
+ {
+   "Symbol": "GNAQ",
+   "Name": "G protein subunit alpha q",
+   "Length": 315714,
+   "Localisation": "Chromosome 9: 77716097 - 78031811"
+ },
+ {
+   "Symbol": "RPA1",
+   "Name": "replication protein A1",
+   "Length": 70077,
+   "Localisation": "Chromosome 17: 1830005 - 1900082"
+ },
+ {
+   "Symbol": "CTTN",
+   "Name": "cortactin",
+   "Length": 38050,
+   "Localisation": "Chromosome 11: 70398529 - 70436579"
+ },
+ {
+   "Symbol": "RBX1",
+   "Name": "ring-box 1",
+   "Length": 21931,
+   "Localisation": "Chromosome 22: 40951378 - 40973309"
+ },
+ {
+   "Symbol": "MIR125A",
+   "Name": "microRNA 125a",
+   "Length": 85,
+   "Localisation": "Chromosome 19: 51693254 - 51693339"
+ },
+ {
+   "Symbol": "STAT5B",
+   "Name": "signal transducer and activator of transcription 5B",
+   "Length": 89260,
+   "Localisation": "Chromosome 17: 42199177 - 42288437"
+ },
+ {
+   "Symbol": "PHB1",
+   "Name": "prohibitin 1",
+   "Length": 10830,
+   "Localisation": "Chromosome 17: 49404052 - 49414882"
+ },
+ {
+   "Symbol": "YWHAQ",
+   "Name": "tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein theta",
+   "Length": 47030,
+   "Localisation": "Chromosome 2: 9583967 - 9630997"
+ },
+ {
+   "Symbol": "NEFL",
+   "Name": "neurofilament light chain",
+   "Length": 5657,
+   "Localisation": "Chromosome 8: 24950955 - 24956612"
+ },
+ {
+   "Symbol": "DDB1",
+   "Name": "damage specific DNA binding protein 1",
+   "Length": 33654,
+   "Localisation": "Chromosome 11: 61299451 - 61333105"
+ },
+ {
+   "Symbol": "TRIM28",
+   "Name": "tripartite motif containing 28",
+   "Length": 6658,
+   "Localisation": "Chromosome 19: 58544064 - 58550722"
+ },
+ {
+   "Symbol": "PKD2",
+   "Name": "polycystin 2, transient receptor potential cation channel",
+   "Length": 70144,
+   "Localisation": "Chromosome 4: 88007635 - 88077779"
+ },
+ {
+   "Symbol": "CDC20",
+   "Name": "cell division cycle 20",
+   "Length": 4222,
+   "Localisation": "Chromosome 1: 43358981 - 43363203"
+ },
+ {
+   "Symbol": "SMN2",
+   "Name": "survival of motor neuron 2, centromeric",
+   "Length": 28072,
+   "Localisation": "Chromosome 5: 70049523 - 70077595"
+ },
+ {
+   "Symbol": "MAVS",
+   "Name": "mitochondrial antiviral signaling protein",
+   "Length": 29284,
+   "Localisation": "Chromosome 20: 3846834 - 3876118"
+ },
+ {
+   "Symbol": "DIABLO",
+   "Name": "diablo IAP-binding mitochondrial protein",
+   "Length": 19794,
+   "Localisation": "Chromosome 12: 122207662 - 122227456"
+ },
+ {
+   "Symbol": "ATXN3",
+   "Name": "ataxin 3",
+   "Length": 48030,
+   "Localisation": "Chromosome 14: 92058552 - 92106582"
+ },
+ {
+   "Symbol": "ABCC4",
+   "Name": "ATP binding cassette subfamily C member 4",
+   "Length": 281616,
+   "Localisation": "Chromosome 13: 95019835 - 95301451"
+ },
+ {
+   "Symbol": "AQP3",
+   "Name": "aquaporin 3 (Gill blood group)",
+   "Length": 6442,
+   "Localisation": "Chromosome 9: 33441154 - 33447596"
+ },
+ {
+   "Symbol": "RAB5A",
+   "Name": "RAB5A, member RAS oncogene family",
+   "Length": 38078,
+   "Localisation": "Chromosome 3: 19947097 - 19985175"
+ },
+ {
+   "Symbol": "CUL3",
+   "Name": "cullin 3",
+   "Length": 115213,
+   "Localisation": "Chromosome 2: 224470150 - 224585363"
+ },
+ {
+   "Symbol": "HSPA9",
+   "Name": "heat shock protein family A (Hsp70) member 9",
+   "Length": 21645,
+   "Localisation": "Chromosome 5: 138553756 - 138575401"
+ },
+ {
+   "Symbol": "CUL4A",
+   "Name": "cullin 4A",
+   "Length": 58915,
+   "Localisation": "Chromosome 13: 113208193 - 113267108"
+ },
+ {
+   "Symbol": "BIRC3",
+   "Name": "baculoviral IAP repeat containing 3",
+   "Length": 22030,
+   "Localisation": "Chromosome 11: 102317373 - 102339403"
+ },
+ {
+   "Symbol": "MECOM",
+   "Name": "MDS1 and EVI1 complex locus",
+   "Length": 580275,
+   "Localisation": "Chromosome 3: 169083506 - 169663781"
+ }
+]
