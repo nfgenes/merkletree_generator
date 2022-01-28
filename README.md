@@ -14,7 +14,10 @@ To generate a Merkle tree via command line, use:
 cat hashArray.json | merkletreejs --leaves=- --hash=keccak256 --output=tree
 ```
 
-This utility is built with
+This utility is built with:
+
 [merkletreejs](https://github.com/miguelmota/merkletreejs)
+
 [merkletreejs-clie](https://github.com/miguelmota/merkletreejs-cli)
+
 [keccak256](https://github.com/miguelmota/keccak256)
