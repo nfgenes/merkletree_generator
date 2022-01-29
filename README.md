@@ -1,4 +1,4 @@
-# Merkle Tree Generator
+# NFgenes 🧬⛓ - Merkle Tree Generator
 
 This utility generates a Merkle tree from a provided list of genes in a json file called 'NFgenesList.json'. The Merkle tree will be automatically generated and stored in 'MerkleTree.txt'.
 
