@@ -52,7 +52,7 @@ cat MerkleLeaves.json | merkletreejs --leaves=- --hash=keccak256 --output=tree
 
 ## Resources
 
-These utilities are built with:
+This repo is built using:
 --------------------------
 
 [merkletreejs](https://github.com/miguelmota/merkletreejs)
@@ -64,9 +64,9 @@ These utilities are built with:
 Helpful Resources on Merkle Trees
 --------------------------------
 
-[OpenZeppelin Merkle Proof Contract Library](https://docs.openzeppelin.com/contracts/4.x/api/utils#MerkleProof)
-[merkletreejs Library](https://github.com/miguelmota/merkletreejs)
-[Smart Contract Programmer - Merkle Trees](https://www.youtube.com/watch?v=n6nEPaE7KZ8)
-[Using Merkle Trees for NFT Whitelists](https://medium.com/@ItsCuzzo/using-merkle-trees-for-nft-whitelists-523b58ada3f9)
+- [OpenZeppelin Merkle Proof Contract Library](https://docs.openzeppelin.com/contracts/4.x/api/utils#MerkleProof)
+- [merkletreejs Library](https://github.com/miguelmota/merkletreejs)
+- [Smart Contract Programmer - Merkle Trees](https://www.youtube.com/watch?v=n6nEPaE7KZ8)
+- [Using Merkle Trees for NFT Whitelists](https://medium.com/@ItsCuzzo/using-merkle-trees-for-nft-whitelists-523b58ada3f9)
 
 Learn more about the [NFgenes 🧬⛓ project](https://github.com/nfgenes/overview#nfgenes-nonfungible-genes-overview)
