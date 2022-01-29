@@ -16,8 +16,7 @@ for (i = 0; i < geneList.length; i++) {
     let currentValue;
     currentLeaf = geneList[i];
     currentValue = '0x' + keccak256(JSON.stringify(geneList[i])).toString('hex');
-    console.log(currentValue);
-    console.log(`Generating keccak256 hash for ${currentLeaf.Symbol}`);
+    console.log(`Generating keccak256 hash for ${currentLeaf}`);
     leavesHashArray.push(currentValue);
 }
 
@@ -40,7 +39,7 @@ fs.writeFile('MerkleLeaves.json', JSON.stringify(leavesHashArray), err => {
  *  Creates a new file called 'MerkleTree' that contains
  *  the generated Merkle tree from the 'MerkleLeaves.json' file
  */
-const tree = new MerkleTree(leavesHashArray, keccak256);
+const tree = new MerkleTree(leavesHashArray, keccak256, {sortPairs: true});
 console.log('Tree:\n', tree.toString());
 
 fs.writeFile('MerkleTree.txt', tree.toString(), err => {
