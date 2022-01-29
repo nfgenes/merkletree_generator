@@ -12,12 +12,6 @@ const leavesHashArray = [];
 let tree;
 
 const populateLeavesHashArray = () => {
-    /**
-     *  Iterate through the json array source data and keccak256
-     *  hash each gene object into a hexadecimal string.
-     * 
-     *  Store this new json array in the 'leavesHashArray' variable
-     */
     for (i = 0; i < geneList.length; i++) {
         let currentLeaf;
         let currentValue;
@@ -38,7 +32,18 @@ const generateTree = () => {
 const generateProof = (arrayIndex) => {
     generateTree();
     const proof = tree.getHexProof(leavesHashArray, arrayIndex);
+
+    const rootHash = tree.getHexRoot();
+    console.log(`Root Hash: ${rootHash}`);
+    
     console.log(proof);
+
+    fs.writeFile('MerkleTreeProof.json', JSON.stringify([rootHash, proof]), err => {
+        if (err) {
+            throw err;
+        }
+        console.log(`Generating Merkle Tree Proof...`);
+    })
 }
 
 generateProof(1);
