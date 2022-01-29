@@ -2,6 +2,7 @@ const keccak256 = require('keccak256');
 const fs = require('fs');
 const { MerkleTree } = require('merkletreejs')
 const geneList = require('./NFgenesList.json');
+const TreeSummary = require('./MerkleTreeSummary.json');
 
 /**
  *  TO DO: Add a check for a generated tree that is unbalanced. At a minimum
@@ -38,7 +39,7 @@ const generateProof = (arrayIndex) => {
     
     console.log(proof);
 
-    fs.writeFile('MerkleTreeProof.json', JSON.stringify([rootHash, proof]), err => {
+    fs.writeFile('MerkleTreeProof.json', JSON.stringify([TreeSummary[arrayIndex].Hash, proof]), err => {
         if (err) {
             throw err;
         }
@@ -46,4 +47,4 @@ const generateProof = (arrayIndex) => {
     })
 }
 
-generateProof(1);
+generateProof(8);
