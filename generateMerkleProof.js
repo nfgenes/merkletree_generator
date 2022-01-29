@@ -39,7 +39,7 @@ const generateProof = (arrayIndex) => {
     
     console.log(proof);
 
-    fs.writeFile('MerkleTreeProof.json', JSON.stringify([TreeSummary[arrayIndex].Hash, proof]), err => {
+    fs.writeFile('MerkleTreeProof.txt', JSON.stringify(TreeSummary[arrayIndex].Hash) + ',' + JSON.stringify(proof), err => {
         if (err) {
             throw err;
         }
@@ -47,4 +47,4 @@ const generateProof = (arrayIndex) => {
     })
 }
 
-generateProof(8);
+generateProof(55);
