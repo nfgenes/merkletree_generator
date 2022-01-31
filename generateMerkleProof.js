@@ -45,6 +45,13 @@ const generateProof = (arrayIndex) => {
         }
         console.log(`Generating Merkle Tree Proof...`);
     })
+
+    fs.writeFile('MerkleTreeProofValue', leavesHashArray[arrayIndex], err => {
+        if (err) {
+            throw err
+        }
+        console.log(`Saving selected proof value to MerkleTreeProofValue.txt`);
+    })
 }
 
 generateProof(9);
