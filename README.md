@@ -46,14 +46,14 @@ The array index value must be passed into the 'generateProof()' function.
 
 A file containing the Merkle Proof that can be copy and pasted into the contract function argument will be saved to 'MerkleTreeProof.txt'.
 
+- [Example Merkle Proof](https://github.com/nfgenes/merkletree_generator/blob/main/MerkleTreeProof.txt)
+
 The command line will also display the proof information.
 ![proof display](https://github.com/nfgenes/merkletree_generator/blob/main/merkletree_generateMerkleProofOutput.png)
 
 ```
 node generateMerkleProof.js
 ```
-
-- [Example Merkle Proof](https://github.com/nfgenes/merkletree_generator/blob/main/MerkleTreeProof.txt)
 
 To generate a Merkle tree and view via command line (this will not generate a file), use:
 
