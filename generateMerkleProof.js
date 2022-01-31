@@ -35,22 +35,16 @@ const generateProof = (arrayIndex) => {
     const proof = tree.getHexProof(leavesHashArray, arrayIndex);
 
     const rootHash = tree.getHexRoot();
+    console.log(`Generating Merkle Tree Proof...`);
     console.log(`Root Hash: ${rootHash}`);
-    
+    console.log(`Selected value: ${leavesHashArray[arrayIndex]}`);
+    console.log(`Proof Array:`);
     console.log(proof);
 
     fs.writeFile('MerkleTreeProof.txt', JSON.stringify(TreeSummary[arrayIndex].Hash) + ',' + JSON.stringify(proof), err => {
         if (err) {
             throw err;
         }
-        console.log(`Generating Merkle Tree Proof...`);
-    })
-
-    fs.writeFile('MerkleTreeProofValue', leavesHashArray[arrayIndex], err => {
-        if (err) {
-            throw err
-        }
-        console.log(`Saving selected proof value to MerkleTreeProofValue.txt`);
     })
 }
 
