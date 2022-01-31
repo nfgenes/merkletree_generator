@@ -38,6 +38,12 @@ node generateTreeSummary.js
 
 The below script will generate a Merkle Proof file containing necessary information to pass into the VPBM contract. Simply copy and past the contents of the file into the calldata.
 
+You will need to select a value available in the 'MerkleLeaves.json' file first.
+![merkle proof value selection](https://github.com/nfgenes/merkletree_generator/blob/main/merkletree_MerkleProofSelection.png)
+
+The array index value must be passed into the 'generateProof()' function.
+![pass array index value to function](https://github.com/nfgenes/merkletree_generator/blob/main/merkletree_generateMerkleProof.png)
+
 ```
 node generateMerkleProof.js
 ```
