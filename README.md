@@ -44,6 +44,11 @@ You will need to select a value available in the 'MerkleLeaves.json' file first.
 The array index value must be passed into the 'generateProof()' function.
 ![pass array index value to function](https://github.com/nfgenes/merkletree_generator/blob/main/merkletree_generateMerkleProof.png)
 
+A file containing the Merkle Proof that can be copy and pasted into the contract function argument will be saved to 'MerkleTreeProof.txt'.
+
+The command line will also display the proof information.
+![proof display](https://github.com/nfgenes/merkletree_generator/blob/main/merkletree_generateMerkleProofOutput.png)
+
 ```
 node generateMerkleProof.js
 ```
