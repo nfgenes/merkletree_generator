@@ -47,4 +47,4 @@ const generateProof = (arrayIndex) => {
     })
 }
 
-generateProof(55);
+generateProof(9);
