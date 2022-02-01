@@ -89,7 +89,7 @@ const runLogs = () => {
     console.log(`Depth ${treeDepth}`);
 }
 
-const runThisShit = () => {
+const runSync = () => {
     generateLeavesHashArray();
     generateMerkleLeaves();
     generateMerkleTree();
@@ -98,4 +98,4 @@ const runThisShit = () => {
     console.log('...Everything is Merkled');
 } 
 
-runThisShit();
+runSync();
