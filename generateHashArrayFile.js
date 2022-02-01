@@ -36,7 +36,7 @@ const generateLeavesHashArray = () => {
  */
 
 
-const generateMerkleLeaves = async () => {
+const generateMerkleLeaves = () => {
     /**
      *  Creates a new json file with the array of hashed gene objects
      */
