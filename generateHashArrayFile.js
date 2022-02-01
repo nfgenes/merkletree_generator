@@ -9,7 +9,7 @@ let treeDepth;
 let leafCount;
 let tree;
 
-const generateLeavesHashArray = async () => {
+const generateLeavesHashArray = () => {
     /**
      *  Iterate through the json array source data and keccak256
      *  hash each gene object into a hexadecimal string.
@@ -40,72 +40,62 @@ const generateMerkleLeaves = async () => {
     /**
      *  Creates a new json file with the array of hashed gene objects
      */
-    try {
-        fs.writeFile('MerkleLeaves.json', JSON.stringify(leavesHashArray), err => {
-            if (err) {
-                throw err;
-            }
-            console.log('Hashed array saved to MerkleLeaves.json');
-        });
-    } catch (e) {
-        console.log(e);
-    }
+    fs.writeFileSync('MerkleLeaves.json', JSON.stringify(leavesHashArray), err => {
+        if (err) {
+            throw err;
+        }
+        console.log('Hashed array saved to MerkleLeaves.json');
+    });
 }
 
-const generateMerkleTree = async () => {
+const generateMerkleTree = () => {
     /**
      *  Creates a new file called 'MerkleTree' that contains
      *  the generated Merkle tree from the 'MerkleLeaves.json' file
      */
-    try {
-        tree = new MerkleTree(leavesHashArray, keccak256, {sortPairs: true});
-        console.log('Tree:\n', tree.toString());
-        
-        fs.writeFile('MerkleTree.txt', tree.toString(), err => {
-            if (err) {
-                throw err;
-            }
-            console.log(`Merkle tree generated.`);
-        });
-    } catch (e) {
-        console.log(e);
-    }
+    tree = new MerkleTree(leavesHashArray, keccak256, {sortPairs: true});
+    console.log('Tree:\n', tree.toString());
+    
+    fs.writeFileSync('MerkleTree.txt', tree.toString(), err => {
+        if (err) {
+            throw err;
+        }
+        console.log(`Merkle tree generated.`);
+    });
 
     layerCount = tree.getLayerCount();
     treeDepth = tree.getDepth();
     leafCount = tree. getLeafCount();
 }
 
-const generateMerkleRoot = async () => {
+const generateMerkleRoot = () => {
     /**
      *  Create text file called 'MerkleTreeRoot' that contains
      *  the Merkle tree root hash.
      */
-    try {
-        fs.writeFile('MerkleTreeRoot.txt', tree.getHexRoot(), err => {
-            if (err) {
-                throw err;
-            }
-            console.log(`Merkle Tree root hash is\n ...${tree.getHexRoot()} \n ...Saving to MerkleTreeRoot.txt`);
-        });
-    } catch (e) {
-        console.log(e);
-    }
+
+    fs.writeFileSync('MerkleTreeRoot.txt', tree.getHexRoot(), err => {
+        if (err) {
+            throw err;
+        }
+        console.log(`Merkle Tree root hash is\n ...${tree.getHexRoot()} \n ...Saving to MerkleTreeRoot.txt`);
+    });
 }
 
-const runLogs = async () => {
+const runLogs = () => {
     // Log some information
-    try {
-        console.log(`Layer Count: ${layerCount}`);
-        console.log(`Leaf Count: ${leafCount}`);
-        console.log(`Depth ${treeDepth}`);
-    } catch (e) {
-        console.log(e);
-    }
+    console.log(`Layer Count: ${layerCount}`);
+    console.log(`Leaf Count: ${leafCount}`);
+    console.log(`Depth ${treeDepth}`);
 }
 
-generateLeavesHashArray()
-    .then(generateMerkleLeaves()
-        .then(generateMerkleTree()
-            .then(generateMerkleRoot()
-                .then(runLogs()))));
+const runThisShit = () => {
+    generateLeavesHashArray();
+    generateMerkleLeaves();
+    generateMerkleTree();
+    generateMerkleRoot();
+    runLogs();
+    console.log('...Everything is Merkled');
+} 
+
+runThisShit();
