@@ -9,5 +9,9 @@
   "description": "Generates a Merkle tree from a json file of gene objects",
   "main": "index.js",
   "author": "josevelez.eth",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "generate": "node generateHashArrayFile.js && node generateTreeSummary.js",
+    "proof": "node generateMerkleProof.js"
+  }
 }
