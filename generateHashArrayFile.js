@@ -9,7 +9,7 @@ const leavesHashArray = [];
 // let leafCount;
 let tree;
 
-const generateLeavesHashArray = async () => {
+const generateLeavesHashArray = () => {
     /**
      *  Iterate through the json array source data and keccak256
      *  hash each gene object into a hexadecimal string.
@@ -42,7 +42,7 @@ const generateLeavesHashArray = async () => {
  */
 
 
-const generateMerkleLeaves = async () => {
+const generateMerkleLeaves = () => {
     /**
      *  Creates a new json file with the array of hashed gene objects
      */
@@ -58,7 +58,7 @@ const generateMerkleLeaves = async () => {
     }
 }
 
-const generateMerkleTree = async () => {
+const generateMerkleTree = () => {
     /**
      *  Creates a new file called 'MerkleTree' that contains
      *  the generated Merkle tree from the 'MerkleLeaves.json' file
@@ -82,7 +82,7 @@ const generateMerkleTree = async () => {
     }
 }
 
-const generateMerkleRoot = async () => {
+const generateMerkleRoot = () => {
     /**
      *  Create text file called 'MerkleTreeRoot' that contains
      *  the Merkle tree root hash.
