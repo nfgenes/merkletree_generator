@@ -12,22 +12,21 @@ const TreeSummary = require('./MerkleTreeSummary.json');
 const leavesHashArray = [];
 let tree;
 
+const extract = geneList.main.SYMBOL_primary;
+
 const populateLeavesHashArray = () => {
-    for (i = 0; i < geneList.length; i++) {
+    for (i = 0; i < extract.length; i++) {
         let currentLeaf;
         let currentValue;
-        currentLeaf = geneList[i];
-        currentValue = '0x' + keccak256(JSON.stringify(geneList[i])).toString('hex');
-        console.log(`Generating keccak256 hash for ${currentLeaf}`);
+        currentLeaf = extract[i];
+        currentValue = '0x' + keccak256(JSON.stringify(extract[i])).toString('hex');
         leavesHashArray.push(currentValue);
     }
-    console.log(`Hash array is length ${leavesHashArray.length}`);
 }
 
 const generateTree = () => {
     populateLeavesHashArray();
     tree = new MerkleTree(leavesHashArray, keccak256, {sortPairs: true});
-    console.log(`Merkle Tree:\n ${tree}`);
 }
 
 const generateProof = (arrayIndex) => {
