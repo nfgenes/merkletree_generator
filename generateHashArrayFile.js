@@ -4,12 +4,9 @@ const { MerkleTree } = require('merkletreejs')
 const geneList = require('./NFgenesList.json');
 
 const leavesHashArray = [];
-// let layerCount;
-// let treeDepth;
-// let leafCount;
 let tree;
 
-const generateLeavesHashArray = () => {
+const generateLeavesHashArray = async () => {
     /**
      *  Iterate through the json array source data and keccak256
      *  hash each gene object into a hexadecimal string.
@@ -42,7 +39,7 @@ const generateLeavesHashArray = () => {
  */
 
 
-const generateMerkleLeaves = () => {
+const generateMerkleLeaves = async () => {
     /**
      *  Creates a new json file with the array of hashed gene objects
      */
@@ -58,7 +55,7 @@ const generateMerkleLeaves = () => {
     }
 }
 
-const generateMerkleTree = () => {
+const generateMerkleTree = async () => {
     /**
      *  Creates a new file called 'MerkleTree' that contains
      *  the generated Merkle tree from the 'MerkleLeaves.json' file
@@ -82,7 +79,7 @@ const generateMerkleTree = () => {
     }
 }
 
-const generateMerkleRoot = () => {
+const generateMerkleRoot = async () => {
     /**
      *  Create text file called 'MerkleTreeRoot' that contains
      *  the Merkle tree root hash.
