@@ -44,6 +44,11 @@ A file containing the Merkle Proof that can be copy and pasted into the contract
 
 ![Example Merkle Proof - File output](https://github.com/nfgenes/merkletree_generator/blob/main/doc/generate_merkleproof_example_result.png)
 
+## Sample Smart Contract Using the Merkle Tree
+[sample smart contract implementation](https://rinkeby.etherscan.io/address/0x3902459edb16fa5e8d87aa06effd519a4441ab41)
+- Sample Root Hash: "0x9b940b90aeb7ba14d0337f272a01143604516b83f1fc772c5d5d82995ad415a0"
+- Sample Proof: 
+
 ## Resources
 
 This repo is built using:
