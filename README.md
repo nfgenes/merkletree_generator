@@ -40,8 +40,9 @@ You will need to provide a value that is available in `GeneSymbolList.json`.
 
 A file containing the Merkle Proof that can be copy and pasted into the contract function argument will be saved to `MerkleProof_[symbol].json` where `[symbol]` is replaced with the symbol that was passed into the `generateMerkleTree()` function.
 
-- ![Example Merkle Proof - Console.log()](https://github.com/nfgenes/merkletree_generator/blob/main/doc/generate_merkleproof_example.png)
-- ![Example Merkle Proof - File output](https://github.com/nfgenes/merkletree_generator/blob/main/doc/generate_merkleproof_example_result.png)
+![Example Merkle Proof - Console.log()](https://github.com/nfgenes/merkletree_generator/blob/main/doc/generate_merkleproof_example.png)
+
+![Example Merkle Proof - File output](https://github.com/nfgenes/merkletree_generator/blob/main/doc/generate_merkleproof_example_result.png)
 
 ## Resources
 
