@@ -44,10 +44,33 @@ A file containing the Merkle Proof that can be copy and pasted into the contract
 
 ![Example Merkle Proof - File output](https://github.com/nfgenes/merkletree_generator/blob/main/doc/generate_merkleproof_example_result.png)
 
-## Sample Smart Contract Using the Merkle Tree
-[sample smart contract implementation](https://rinkeby.etherscan.io/address/0x3902459edb16fa5e8d87aa06effd519a4441ab41)
+## Sample Smart Contract Implementation
 - Sample Root Hash: "0x9b940b90aeb7ba14d0337f272a01143604516b83f1fc772c5d5d82995ad415a0"
 - Sample Proof: 
+```
+{
+  "Leaf Value": "HAX1",
+  "Leaf Hex": "48415831",
+  "LeafHash": "0x91933e9a3f692378db35865c6e03977355c08334905024a9cbf0fb2ea53f2335",
+  "Proof": [
+    "0x918c65c4ff343aba1b16d5e167f7f0a5c45b4dc9a0060f344dde130293601f77",
+    "0xa0897f90b6a19494724724e4acf5ece124f3e9def9cf319f7d271b601310bda3",
+    "0x89cf54a9d0d2325345394253ab2a4ac24276e0eac6d88e8286cfd6d633ff0ddb",
+    "0x74c7aa36d8bfea1434c79763628bd9c382b0e6a6d75b71b79ed91e18d6d2205f",
+    "0xa89ec44bcd746da7f865d89f85d05924ec344d927b03a0d69b931d0aae8fb508",
+    "0x4b1ce400a43b6fcece4a40face31846f244e08e44f13c815d8c09126ce004538",
+    "0xf53baaaf2e1c27f535057fd79e1846751a6f5296a900b11d41883bf667e44084",
+    "0x4a012c2f89ecdfdfed0c6514960cd161060ab8b941be956cbf1749b7e679107d",
+    "0x8954028403afb20964f6e45221649aacfbdc75ff5459a8c82b67ccc679855557",
+    "0x94039d13a431084508f9f1d2c49909591af0216904ae29f4107eb5a951743c9b",
+    "0x231e8935bbabe7825b67643ed5466ecc850fcaeafaf4f10ef55bb5486c025e81",
+    "0xdbef638b800cdbe49d722e0c18805637506b411e3eee8399cb3c617660e44bff",
+    "0x672bca2df821d58846413f89865e665bb66439668214b7d80d4208de43aadff0",
+    "0xae886e90907d08fc2a56c51172102c6556f5e50e188c6005550463c2d8572dbe",
+    "0x0d58d9c38b5ff10861d439ac99205e429a71bf49f1911af6ddf5fdb6bccee36f"
+  ]
+}
+```
 
 ## Resources
 
