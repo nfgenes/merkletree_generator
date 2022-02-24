@@ -1,4 +1,5 @@
 const keccak256 = require('keccak256');
+const toHex = require('to-hex');
 const fs = require('fs');
 const { MerkleTree } = require('merkletreejs')
 const geneList = require('./data/NFgenesList.json');
@@ -29,10 +30,10 @@ async function generateMerkleTree(symbol) {
  * Using the selected leaf value, lookup the corresponding hash
  * and index from the Merkle Tree Summary json file
 */
-async function getLeafHashFromTreeSummary(leafValue) {
+async function getLeafHashFromTreeSummary(symbol) {
     try {
         const treeSummary = JSON.parse(fs.readFileSync('./example/MerkleTreeSummary.json'));
-        const leafHash = treeSummary.filter(x => x.Leaf === leafValue);
+        const leafHash = treeSummary.filter(x => x.Leaf === symbol);
         leafHash != 0 ? leafIndex = tree.getLeafIndex(leafHash[0].Hash) : checkStatus = 0;
     } catch (e) {
         console.log(e);
@@ -47,12 +48,14 @@ async function getProof(value) {
     try {
         const leaves = tree.getHexLeaves();
         const proof = tree.getHexProof(leaves[value]);
+        const leafValueHex = toHex(leaf);
         const leafFilePath = `./example/MerkleProof_${leaf}.json`;
     
         console.log(`Proof generated for ${leaf}`);
         console.log(`Saving proof to ${leafFilePath}`);
         fs.writeFileSync(leafFilePath, JSON.stringify({
             "Leaf Value": leaf,
+            "Leaf Hex": leafValueHex,
             "LeafHash": leaves[value],
             "Proof": proof
         }));
@@ -61,7 +64,7 @@ async function getProof(value) {
     }
 }
 
-generateMerkleTree("HAX1")
+generateMerkleTree("RPAP3")
     // pass in a leaf value to generate a proof
     .then(getLeafHashFromTreeSummary(leaf))
     .then(checkValue)
