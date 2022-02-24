@@ -16,10 +16,11 @@ const geneList = require('./data/NFgenesList.json');
 
 const extract = geneList.id_symbol_primary;
 
-async function generateMerkleTree() {
+async function generateMerkleTree(symbol) {
     try {
         tree = new MerkleTree(extract, keccak256, {sortPairs: true, sortLeaves: true, sort: true, hashLeaves: true});
         root = tree.getHexRoot();
+        leaf = symbol;
     } catch (e) {
         console.log(e);
     }
@@ -30,7 +31,6 @@ async function generateMerkleTree() {
 */
 async function getLeafHashFromTreeSummary(leafValue) {
     try {
-        leaf = leafValue;
         const treeSummary = JSON.parse(fs.readFileSync('./example/MerkleTreeSummary.json'));
         const leafHash = treeSummary.filter(x => x.Leaf === leafValue);
         leafHash != 0 ? leafIndex = tree.getLeafIndex(leafHash[0].Hash) : checkStatus = 0;
@@ -61,7 +61,7 @@ async function getProof(value) {
     }
 }
 
-generateMerkleTree()
+generateMerkleTree("HAX1")
     // pass in a leaf value to generate a proof
-    .then(getLeafHashFromTreeSummary("HAX1"))
+    .then(getLeafHashFromTreeSummary(leaf))
     .then(checkValue)
