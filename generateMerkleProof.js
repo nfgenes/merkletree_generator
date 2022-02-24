@@ -12,6 +12,7 @@ const geneList = require('./data/NFgenesList.json');
  let root;
  let leaf
  let leafIndex;
+ let checkStatus;
 
 const extract = geneList.id_symbol_primary;
 
@@ -28,27 +29,39 @@ async function generateMerkleTree() {
  * and index from the Merkle Tree Summary json file
 */
 async function getLeafHashFromTreeSummary(leafValue) {
-    leaf = leafValue;
-    const treeSummary = JSON.parse(fs.readFileSync('./example/MerkleTreeSummary.json'));
-    const LeafHash = treeSummary.filter(x => x.Leaf === leafValue);
-    leafIndex = tree.getLeafIndex(LeafHash[0].Hash);
+    try {
+        leaf = leafValue;
+        const treeSummary = JSON.parse(fs.readFileSync('./example/MerkleTreeSummary.json'));
+        const leafHash = treeSummary.filter(x => x.Leaf === leafValue);
+        leafHash != 0 ? leafIndex = tree.getLeafIndex(leafHash[0].Hash) : checkStatus = 0;
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+const checkValue = () => {
+    checkStatus === 0 ? console.log("Error: value does not exist within the list") : getProof(leafIndex);
 }
 
 async function getProof(value) {
-    const leaves = tree.getHexLeaves();
-    const proof = tree.getHexProof(leaves[value]);
-    const leafFilePath = `./example/MerkleProof_${leaf}.json`;
-
-    console.log(`Proof generated for ${leaf}`);
-    console.log(`Saving proof to ${leafFilePath}`);
-    fs.writeFileSync(leafFilePath, JSON.stringify({
-        "Leaf Value": leaf,
-        "LeafHash": leaves[value],
-        "Proof": proof
-    }));
+    try {
+        const leaves = tree.getHexLeaves();
+        const proof = tree.getHexProof(leaves[value]);
+        const leafFilePath = `./example/MerkleProof_${leaf}.json`;
+    
+        console.log(`Proof generated for ${leaf}`);
+        console.log(`Saving proof to ${leafFilePath}`);
+        fs.writeFileSync(leafFilePath, JSON.stringify({
+            "Leaf Value": leaf,
+            "LeafHash": leaves[value],
+            "Proof": proof
+        }));
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 generateMerkleTree()
     // pass in a leaf value to generate a proof
     .then(getLeafHashFromTreeSummary("HAX1"))
-    .then(getProof(leafIndex))
+    .then(checkValue)
